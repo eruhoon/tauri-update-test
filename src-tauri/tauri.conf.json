@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "tauri-update-test",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "identifier": "com.tauri-update-test.app",
   "build": {
     "beforeDevCommand": "pnpm dev",
@@ -35,6 +35,8 @@
   },
   "plugins": {
     "updater": {
+      "active": true,
+      "dialog": true,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDY4MTUyNTY2QzA3QkIwOTIKUldTU3NIdkFaaVVWYUVMdlVmVGFPaDNlUE0wZlRndjZpekpOY2ZzdjhpMjQ3c0p3bmtMYTZudTQK",
       "endpoints": [
         "https://gist.githubusercontent.com/eruhoon/aed725a9ef74a367e01f64a6b9837dbc/raw/update.json"
