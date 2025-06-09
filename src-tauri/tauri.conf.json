@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "tauri-update-test",
+  "version": "0.1.0",
+  "identifier": "com.tauri-update-test.app",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "tauri-update-test",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "createUpdaterArtifacts": true
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDY4MTUyNTY2QzA3QkIwOTIKUldTU3NIdkFaaVVWYUVMdlVmVGFPaDNlUE0wZlRndjZpekpOY2ZzdjhpMjQ3c0p3bmtMYTZudTQK%",
+      "endpoints": [
+        "https://gist.githubusercontent.com/eruhoon/aed725a9ef74a367e01f64a6b9837dbc/raw/68747f30af7e0bac1680645bac7f4776c95541ba/update.json"
+      ]
+    }
+  }
+}
